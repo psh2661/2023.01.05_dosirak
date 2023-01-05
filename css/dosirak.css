@@ -1,0 +1,415 @@
+.blue_txt{
+  color: #2a68b2
+}
+/* common */
+header{
+  width: 100%;
+  height: 90px;
+  position: fixed;
+  z-index: 99999;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  border: 1px solid rgba(255,255,255,0.2);
+  /* background-color: royalblue; */
+}
+header>h1{
+  width: 125px; height: 30px;
+}
+header>h1 img{
+  width: 100%;
+}
+nav{
+  width: 100%;
+  max-width: 900px;
+  height: 100%;
+}
+nav>ul{
+  height: 100%;
+  display: flex;
+}
+nav>ul>li{
+  display: flex;
+  height: 100%;
+  align-items: center;
+  flex: 1 1 auto;
+  /*1씩나누어 갖다가 부족하면 자동으로 맞춤*/
+  justify-content: center;
+}
+nav>ul>li>a{
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 17px;
+  position: relative;
+  /* a:hover> transition: 0.3s; */
+}
+nav>ul>li:hover a::after{
+  width: 100%;
+  opacity: 100%;
+}
+/* li의 호버 너비100%가 
+a의 에프터일때 0%에서 100%로 보이게 명령*/
+nav>ul>li>a::after{
+  content: "";
+  /*공식 내용이 들어갈수있게 자리는 만들어야 한다*/
+  position: absolute;/*디스플레이 블록 x*/
+  left: 1px;
+  bottom: -10px;
+  /*bottom있어 margin값은 따로 필요하지 않지만
+  a의 기준 0px를 기준 밑으로 내리고 싶기 때문에 -를 준다*/
+  width: 0;
+  height: 2px;
+  /* boder값을 주지않고 높이를 주는 이유는
+  transition주기 어렵기 때문에 border값을 주는 것이다*/
+  background-color: #fff;
+  opacity: 0;
+  transition: width 0.3s, opacity 1s;
+}
+/* nav>ul>li>a:hover{
+  border-bottom: 2px solid #fff;
+} */
+.btn_nav{
+  display: none;
+  width: 40px;
+}
+.btn_nav span{
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  margin: 10px 0;
+}
+/* header end*/
+
+
+main{
+  width: 100%;
+  /* height: 600px; */
+  border: 1px solid;
+  box-sizing: border-box;
+}
+.slide_wrap{
+  width: 100%;
+  height: 100vh;
+  max-height: 970px;
+  position: relative;
+  background-image: url(/img/main_visual_4.jpg);
+  background-size: cover;
+}
+.slide_wrap>.slide{
+  width: 100%;
+  max-width: 1480px;
+  height: 100%;
+  position: relative;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.arrows{
+  position: absolute;
+  left: 0;
+  top: 35%;
+  display: flex;
+}
+.arrows>div{
+  width: 60px; height: 60px;
+  border-radius: 50%;
+  background-color: rgba(255,255,255,0.5);
+  color: #fff;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+.slide_text{
+  position: absolute;
+  left: 0; top: 40%;
+}
+.slide_text>h1{
+  font-size: 74px;
+  color: #fff;
+  font-weight: bolder;
+  margin: 20px 0 12px;
+}
+.slide_text>p{
+  opacity: 0.9;
+  margin-top: 10px;
+  font-size: 22px;
+  font-weight: 500;
+  color: #fff;
+}
+.slide_text>.btn_more{
+  width: 220px;
+  height: 65px;
+  border: 1px solid rgba(255,255,255,0.6);
+  color: #fff;
+  font-size: 17px;
+  padding: 0 45px 0 50px;
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+/**/
+section>h2{
+  font-size: 38px;
+  font-weight: bold;
+  color: #222;
+}
+#service{
+  width: 100%;
+  max-width: 1440px;
+  margin: 180px auto 210px;
+}
+#service>h2{
+  text-align: center;
+}
+#service>article{
+  display: flex;
+}
+#service>article>div{
+  /* flex: 1; */
+  width: 50%;
+}
+.serv_big{
+  padding: 10px;
+  position: relative;
+}
+.serv_big>img{
+  width: 100%;
+  position: relative;
+}
+.serv_sm>div{
+  /* line-height: 1; */
+  font-size: 0;/*이미지도 인라인 태그여서 폰트사이즈로 줄을 없앨수 있다*/
+  padding: 10px;
+  box-sizing: border-box;
+  position: relative;
+}
+.serv_sm>div>img{
+  position: relative;
+}
+.serv_txt{
+  position: absolute;
+  left: 60px; bottom: 60px; 
+}
+.serv_txt>h3{
+  font-size: 26px;
+  color: #fff;
+  font-weight: bold;
+}
+.serv_txt>p{
+  font-size: 17px;
+  color: #fff;
+  font-weight: 300;
+  opacity: 0.8;
+}
+.serv_txt>div{
+  width: 100%;
+  max-width: 140px;
+  height: 40px;
+  padding: 0 15px 0 20px;
+  box-sizing: border-box;
+  margin-top: 20px;
+  border: 1px solid rgba(255,255,255,.3);
+  font-size: 15px;
+  color: #fff;
+  line-height: 40px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+#about{
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto 240px;
+  display: flex;
+  /* justify-content: center; */
+}
+#about>h2{
+  width: 50%;/*플랙스 1도 괜춘*/
+}
+#about h3{
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+#about p{
+  margin: 20px 0;
+  font-weight: 600;
+}
+.about_btn{
+  width: 140px;
+  height: 50px;
+  padding: 0 10px;
+  font-size: 15px;
+  font-weight: 600;
+  border-bottom: 2px solid #222;
+  color: #222;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#banners{
+  display: flex;
+  height: 400px;
+}
+#banners>article{
+  flex: 1;
+  height: 100%;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-color: #eee;
+  border-right: 1px solid #dadfe6;
+  padding: 85px 60px;
+  box-sizing: border-box;
+  background-size: 60% auto;
+}
+.members{
+  background-image: url(../img/main_banner_figure1.png);
+}
+.talk{
+  background-image: url(../img/main_banner_figure2.png);
+}
+.insu{
+  background-image: url(../img/main_banner_figure3.png);
+}
+#banners h3{
+  font-size: 24px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 14px;
+}
+#banners p{
+  color: #222;
+  margin-bottom: 40px;
+  opacity: 0.8;
+}
+.bnr_btn{
+  font-size: 15px;
+  font-weight: 700;
+  width: 90px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid #222;
+}
+/* main end*/
+
+footer{
+  width: 100%;
+  padding: 60px 20px;
+  box-sizing: border-box;
+  background-color: #222;
+  font-size: 15px;
+  color: #666;
+}
+footer ul{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+footer ul>li{
+  padding-left: 20px;
+  box-sizing: border-box;
+}
+footer ul>li::after{
+  content: "";
+  display: inline-block;
+  /* top: 50px; */
+  margin-left: 20px;
+  width: 1px;
+  height: 12px;
+  background-color: #444;
+}
+footer ul>li:last-child::after{
+  display: none;
+}
+.f_cs{
+  text-align: center;
+}
+footer p{
+  margin-top: 50px;
+  text-align: center;
+  font-size: 14px;
+}
+@media(max-width: 1280px){
+  .slide_text>h1{
+    font-size: 50px;
+  }
+  .slide_text>.btn_more{
+    width: 180px;
+    height: 55px;
+    padding: 0 20px;
+    margin-top: 30px;
+  }
+  .arrows>div{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  #banners>article{
+    padding: 30px;
+    box-sizing: border-box;
+  }
+}
+@media(max-width: 1024px){
+  nav{
+    display: none;
+  }
+  .btn_nav{
+    display: block;
+  }
+  .slide{
+    /* max-width: 970px; */
+    max-height: 800px;
+  }
+  .slide_text>h1{
+    font-size: 42px;
+  }
+  #banners>article:last-child{
+    display: none;
+  }
+  #about{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .about_btn{
+    margin: 0 auto;
+  }
+  #service>article{
+    flex-direction: column;
+  }
+  #service>article>div{
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  .serv_sm>div{
+    padding: 10px 0;
+    box-sizing: border-box;
+  }
+  .serv_sm>div>img{
+    width: 100%;
+  }
+}
+@media(max-width: 640px){
+  .slide_text>h1{
+    font-size: 32px;
+  }
+  .slide_text>p{
+    font-size: 17px;
+  }
+  footer ul{
+    flex-direction: column;
+  }
+  #banners>article:nth-child(2){
+    display: none;
+  }
+}

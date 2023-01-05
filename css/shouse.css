@@ -1,0 +1,30 @@
+#header{
+  width: 100%;
+  height: auto;
+  border: 1px solid;
+  box-sizing: border-box;
+}
+.top_nav{
+  width: 100%;
+  max-width: 1303px;
+  height: auto;
+  background-color: lightsalmon;
+}
+.top_nav>.sns{
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  border: 1px solid;
+  box-sizing: border-box;
+}
+.top_nav>.sns>.left{
+  width: 100%;
+  max-width: ;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.top_nav>.sns>.left>li{
+  width: 20px;
+  height: 20px;
+}

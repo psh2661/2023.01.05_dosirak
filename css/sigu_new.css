@@ -1,0 +1,162 @@
+#header_top_wrap{
+
+  background-color: #f2f2f2;
+}
+#header_bot_wrap{
+  padding: 10px 0;
+  height: 100px;
+  position: relative;
+  border-bottom: 1px solid #4d4d4d;
+}
+#header_top{
+  display: flex;
+  justify-content: space-between;
+}
+#header_top ul{
+  display: flex;
+  align-items: center;
+  line-height: 40px;
+}
+/* .h_top_left ul{
+  display: flex;
+} */
+.h_top_left a{
+  display: block;/*a는 인라인 태그이기 때문에 블록태그로 변환을 해준다*/
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border: 1px solid #d9d9d9;
+  border-radius: 100%;
+  margin: 10px 1px;
+  text-indent: -999999px;/*텍스트를 제일 위로 올려서 보이지 않게 한다*/
+  background-position: center center;
+  background-size: cover;
+}
+.gp{
+  background-image: url(../img/u_gp.png);
+}
+.ap{
+  background-image: url(../img/u_ap_m.png);
+}
+.ip{
+  background-image: url(../img/u_in_m.png);
+}
+.kp{
+  background-image: url(../img/u_kc_m.png);
+}
+.fp{
+  background-image: url(../img/u_fb.png);
+}
+.yp{
+  background-image: url(../img/u_yt.png);
+}
+
+.h_top_right li{
+  color: #808080;
+  margin-left: 20px;
+}
+.h_top_right a{
+  font-size: 12px;
+  color: inherit;/*a태그는 부모에게 상속을 받지 못하기 때문에 inherit을 사용한다*/
+  text-decoration: none;
+}
+#header_bot>h1{
+  padding-top: 20px;
+}
+#header_bot>h1>a{
+  display: block;
+  width: 160px;
+  height: 30px;
+  margin: 0 auto;
+}
+
+#h_bot_fix{/*부모*/
+  position: relative;
+  padding: 12px 0;
+}
+.m_btn{
+  width: 26px;
+  height: 18px;
+  background-position: -22px -31px;
+}
+.h_bot_left{
+  display: flex;
+  align-items: center;
+}
+.h_bot_left ul{
+  display: flex;
+  padding-left: 32px;
+}
+.h_bot_left ul a{
+  display: block;
+  padding: 0 17px;
+  font-weight: 700;
+  color: #222624;
+  line-height: 40px;
+  text-decoration: none;
+}
+.h_bot_right>ul{
+  display: flex;
+  align-items: center;
+}
+.h_bot_right>ul>li{
+  width: 45px;
+  height: 40px;
+  position: relative;
+}
+.h_bot_right{
+  display: flex;
+  position: absolute;
+  right: 0; top: 10px;
+}
+.h_bot_right a{
+  display: block;
+  position: absolute;
+}
+.mypage{
+  left: 12px; top: 9px;
+  width: 21px;
+  height: 21px;
+  background-position: -50px -32px;
+}
+.scrap_box{
+  display: none;
+}
+/* .scrap{
+  background-image: url(../img/sp_common_m.png);
+} */
+.cart{
+  left: 8px; top: 8px;
+  width: 26px;
+  height: 24px;
+  background-position: -72px -32px;
+}
+.write{
+  left: 10px; top: 8px;
+  width: 22px;
+  height: 22px;
+  background-position: -101px -32px;
+}
+.search{
+  padding: 0 5px;
+  border-radius: 4px;
+  background-color: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.search>input{
+  width: 160px;
+  height: 38px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+.search>span{
+  display: block;
+  width: 17px;
+  height: 17px;
+  background-position: -125px -32px;
+  margin: 0 11px;
+}
+/* header end*/

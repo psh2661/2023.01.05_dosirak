@@ -1,0 +1,64 @@
+/* commom */
+.w1200{
+  width: 1200px;
+  margin: 0 auto;
+  /* padding: 10px 0; */
+  /* background-color: tomato; */
+}
+h3{
+  line-height: 63px;
+  font-size: 25px;
+  font-weight: 700;
+  color: #222624;
+}
+
+
+
+.holder{
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.set.btn{
+  padding-right: 25px;
+  background-image: url(../img/setting.png);
+  background-size: 15px auto;
+}
+.set{
+  position: absolute;
+  top: 20px;
+  right: 0;
+  height: 32px;
+  line-height: 31px;
+  font-size: 16px;
+  font-weight: 700;
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+a{
+  text-decoration: none;
+  color: #222624;
+}
+
+.tag{
+
+}
+.tag>ul{
+  display: flex;
+  justify-content: flex-start;
+}
+.tag>ul>li{
+  margin-top: 10px;
+  margin-right: 10px;
+  width: auto;
+  display: inline-block;
+}
+.tag>ul>li a{
+  font-size: 14px;
+  color: #4d4d4d;
+  padding: 10px 13px;
+  box-sizing: border-box;
+  line-height: 37px;
+  border-radius: 4px;
+  background-color: #f2f2f2;
+}
